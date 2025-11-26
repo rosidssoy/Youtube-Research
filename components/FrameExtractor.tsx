@@ -199,9 +199,16 @@ export default function FrameExtractor({ videoUrl, title }: FrameExtractorProps)
 
                 {/* Error Message */}
                 {error && (
-                    <div className="p-4 bg-destructive/10 text-destructive rounded-xl flex items-center gap-2 text-sm">
-                        <AlertCircle className="w-4 h-4" />
-                        {error}
+                    <div className="p-4 bg-destructive/10 text-destructive rounded-xl flex flex-col gap-2 text-sm">
+                        <div className="flex items-center gap-2 font-medium">
+                            <AlertCircle className="w-4 h-4" />
+                            Extraction Failed
+                        </div>
+                        <p>{error}</p>
+                        <p className="text-xs opacity-80">
+                            Note: Age-restricted, private, or region-locked videos cannot be processed.
+                            Please try a public video (e.g., "Me at the zoo").
+                        </p>
                     </div>
                 )}
 

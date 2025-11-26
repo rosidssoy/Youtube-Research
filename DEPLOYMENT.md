@@ -48,3 +48,18 @@ Configure the following environment variables in your Vercel project settings:
 *   **Prisma Errors**: Ensure `npx prisma generate` is running during the build.
 *   **Rate Limits**: The API has basic rate limiting. If you hit 429 errors, wait a minute.
 *   **YouTube API Quota**: If extraction fails, check your Google Cloud Console for quota usage.
+
+## Visual Frame Extractor Feature
+
+The **Visual Frame Extractor** allows users to extract key frames from YouTube videos.
+
+### Limitations
+- **Public Videos Only:** The extractor works best with public, unrestricted videos.
+- **Restricted Content:** Age-restricted, private, or region-locked videos may fail to load due to YouTube's security measures.
+- **Proxy:** The feature uses a server-side proxy (`/api/proxy-video`) to bypass CORS. This proxy attempts to use multiple sources (Piped API, Innertube) to fetch the video stream.
+
+### Troubleshooting
+If frame extraction fails:
+1. Ensure the video is publicly playable in an Incognito window.
+2. Try a different video to rule out specific video restrictions.
+3. Check the Vercel logs for the `/api/proxy-video` route for detailed error messages.
