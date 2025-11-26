@@ -4,7 +4,7 @@ import { SessionProvider } from "next-auth/react";
 import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
-  title: "VibeClone",
+  title: "VibeCloned",
   description: "The Ultimate YouTube Competitor Research Tool",
 };
 

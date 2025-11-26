@@ -12,7 +12,7 @@ const steps = [
     {
         icon: Bot,
         title: "Step 2: Analyze with AI",
-        description: "Upload JSON to Claude, ChatGPT, or Gemini. Let AI decode title patterns, thumbnail psychology, and script structures."
+        description: "Use our ready-made AI prompts or upload JSON to Claude, ChatGPT, or Gemini. Let AI decode title patterns, thumbnail psychology, and script structures."
     },
     {
         icon: Clapperboard,

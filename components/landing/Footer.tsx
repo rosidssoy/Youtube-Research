@@ -9,7 +9,7 @@ export default function Footer() {
                     <div className="p-2 bg-primary/10 rounded-lg">
                         <Youtube className="w-5 h-5 text-primary" />
                     </div>
-                    <span className="font-bold text-lg tracking-tight">VibeClone</span>
+                    <span className="font-bold text-lg tracking-tight">VibeCloned</span>
                 </div>
 
                 <div className="flex items-center gap-8 text-sm text-muted-foreground">
@@ -25,7 +25,7 @@ export default function Footer() {
                 </div>
 
                 <div className="text-sm text-muted-foreground">
-                    © {new Date().getFullYear()} VibeClone. All rights reserved.
+                    © {new Date().getFullYear()} VibeCloned. All rights reserved.
                 </div>
             </div>
         </footer>

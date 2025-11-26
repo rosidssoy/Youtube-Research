@@ -32,10 +32,18 @@ export default function AppNavbar() {
                     <div className="p-2 bg-primary/10 rounded-lg">
                         <Youtube className="w-6 h-6 text-primary" />
                     </div>
-                    <span className="text-xl font-bold tracking-tight">VibeClone</span>
+                    <span className="text-xl font-bold tracking-tight">VibeCloned</span>
                 </Link>
 
                 <div className="flex items-center gap-4">
+                    {session && (
+                        <Link
+                            href="/prompts"
+                            className="text-sm font-medium hover:text-primary transition-colors"
+                        >
+                            🤖 AI Prompts
+                        </Link>
+                    )}
                     {session ? (
                         <ProfileMenu />
                     ) : (

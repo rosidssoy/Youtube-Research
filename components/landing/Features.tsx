@@ -1,4 +1,4 @@
-import { Layers, Zap, Download, Database, FileText, Shield } from "lucide-react";
+import { Layers, Zap, Download, Database, FileText, Shield, Sparkles } from "lucide-react";
 
 const features = [
     {
@@ -10,6 +10,11 @@ const features = [
         icon: Zap,
         title: "Lightning Fast",
         description: "Get data in seconds. Our optimized engine fetches and processes YouTube data instantly."
+    },
+    {
+        icon: Sparkles,
+        title: "AI Analysis Prompts",
+        description: "Ready-made prompts to analyze competitor data with ChatGPT, Claude, or Gemini. Copy and use instantly."
     },
     {
         icon: Download,
@@ -37,7 +42,7 @@ export default function Features() {
     return (
         <section className="py-20 w-full">
             <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold tracking-tight mb-4">Why Use VibeClone?</h2>
+                <h2 className="text-3xl font-bold tracking-tight mb-4">Why Use VibeCloned?</h2>
                 <p className="text-muted-foreground max-w-2xl mx-auto">
                     Everything you need to reverse-engineer success on YouTube.
                 </p>
