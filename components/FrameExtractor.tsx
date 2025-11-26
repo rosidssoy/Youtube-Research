@@ -50,16 +50,27 @@ export default function FrameExtractor({ videoUrl, title }: FrameExtractorProps)
             // For this demo, we'll try to load it. If it fails, we show an error.
 
             // Wait for metadata to load duration
+            // Wait for metadata to load duration
             if (video.readyState < 1) {
                 await new Promise((resolve, reject) => {
                     video.onloadedmetadata = resolve;
-                    video.onerror = () => reject(new Error("Failed to load video. Note: Direct YouTube URLs cannot be processed client-side due to CORS."));
+                    video.onerror = (e) => {
+                        // Try to get more info about the error if possible, but video.error is often generic
+                        const err = video.error;
+                        let msg = "Failed to load video stream.";
+                        if (err) {
+                            msg += ` (Code: ${err.code}, Message: ${err.message})`;
+                        }
+                        reject(new Error(msg + " The proxy might be blocked or the video is unavailable."));
+                    };
                 });
             }
 
             const duration = video.duration;
             if (!isFinite(duration) || duration === 0) {
-                throw new Error("Invalid video duration");
+                // Sometimes duration is Infinity for streams, but we need it for frame extraction
+                // If Infinity, we might default to a fixed duration or fail
+                throw new Error("Invalid video duration (Infinity or 0). Cannot extract frames.");
             }
 
             const interval = duration / (frameCount + 1);
@@ -197,7 +208,7 @@ export default function FrameExtractor({ videoUrl, title }: FrameExtractorProps)
                 {/* Hidden Video & Canvas */}
                 <video
                     ref={videoRef}
-                    src={videoUrl}
+                    src={`/api/proxy-video?url=${encodeURIComponent(videoUrl)}`}
                     className="hidden"
                     crossOrigin="anonymous"
                     muted
