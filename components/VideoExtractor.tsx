@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { toast } from "sonner";
 import AuthModal from "./AuthModal";
 import TrustBadge from "./landing/TrustBadge";
-import FrameExtractor from "./FrameExtractor";
+
 
 interface VideoData {
     url: string;
@@ -268,9 +268,6 @@ export default function VideoExtractor() {
                             {data.description || "No description available."}
                         </div>
                     </div>
-
-                    {/* Visual Frame Extractor */}
-                    <FrameExtractor videoUrl={data.url} title={data.title} />
 
                     {/* Transcript */}
                     <div className="bg-card rounded-2xl border border-border p-6 shadow-sm space-y-4">
