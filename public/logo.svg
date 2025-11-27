@@ -1,0 +1,19 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Purple gradient definition -->
+  <defs>
+    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Icon: Play button with clone effect -->
+  <circle cx="25" cy="30" r="18" fill="url(#purpleGradient)" opacity="0.2"/>
+  <circle cx="22" cy="30" r="18" fill="url(#purpleGradient)"/>
+  <path d="M 18 21 L 18 39 L 32 30 Z" fill="white"/>
+  
+  <!-- Text: VibeCloned -->
+  <text x="50" y="38" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="24" font-weight="700" fill="url(#purpleGradient)">
+    VibeCloned
+  </text>
+</svg>

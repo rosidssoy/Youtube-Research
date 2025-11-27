@@ -4,7 +4,7 @@ import { SessionProvider } from "next-auth/react";
 import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
-  title: "VibeClone",
+  title: "VibeCloned",
   description: "The Ultimate YouTube Competitor Research Tool",
 };
 
@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body className="antialiased">
         <SessionProvider>
           {children}

@@ -23,15 +23,8 @@ function cn(...inputs: (string | undefined | null | false)[]) {
 export default function Home() {
   const { data: session } = useSession();
   const [activeTab, setActiveTab] = useState<"video" | "channel">("video");
-  const [isDark, setIsDark] = useState(true);
-
-  const toggleTheme = () => {
-    setIsDark(!isDark);
-    document.documentElement.classList.toggle("dark");
-  };
-
   return (
-    <main className={cn("min-h-screen flex flex-col bg-background text-foreground transition-colors duration-300", isDark ? "dark" : "")}>
+    <main className="min-h-screen flex flex-col bg-background text-foreground transition-colors duration-300">
       <AppNavbar />
 
       {/* Hero Section */}

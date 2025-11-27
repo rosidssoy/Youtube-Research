@@ -44,7 +44,7 @@ export default function SignupPage() {
             <div className="w-full max-w-md space-y-8 bg-card p-8 rounded-2xl border border-border shadow-lg">
                 <div className="text-center">
                     <h2 className="text-3xl font-bold text-foreground">Create Account</h2>
-                    <p className="mt-2 text-muted-foreground">Get started with VibeClone</p>
+                    <p className="mt-2 text-muted-foreground">Get started with VibeCloned</p>
                 </div>
 
                 <form className="mt-8 space-y-6" onSubmit={handleSubmit}>

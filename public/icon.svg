@@ -1,0 +1,7 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Clone/Shadow Element (Outlined) -->
+  <path d="M 8 8 L 8 24 L 20 16 Z" stroke="currentColor" stroke-width="2" fill="none" opacity="0.5"/>
+  
+  <!-- Main Play Element (Solid) -->
+  <path d="M 12 10 L 12 22 L 22 16 Z" fill="currentColor"/>
+</svg>

@@ -222,7 +222,22 @@ export default function ChannelExtractor() {
                 throw new Error(json.error || "Failed to analyze videos");
             }
 
-            setAnalyzedData(json.data);
+            // Merge original date data if missing from analysis
+            const mergedData = json.data.map((analyzed: AnalyzedVideo) => {
+                const originalVideo = videos.find(v => v.url === analyzed.url);
+                if (originalVideo && (!analyzed.metadata.upload_date || analyzed.metadata.upload_date === "")) {
+                    return {
+                        ...analyzed,
+                        metadata: {
+                            ...analyzed.metadata,
+                            upload_date: originalVideo.published_at || ""
+                        }
+                    };
+                }
+                return analyzed;
+            });
+
+            setAnalyzedData(mergedData);
 
             // Auto-save with proper channel name extraction
             const channelName = json.data[0]?.metadata?.channel;

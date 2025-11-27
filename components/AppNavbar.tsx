@@ -28,14 +28,23 @@ export default function AppNavbar() {
     return (
         <header className="w-full border-b border-border/40 bg-background/80 backdrop-blur-md sticky top-0 z-50">
             <div className="max-w-7xl mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
-                <Link href="/" className="flex items-center gap-2">
-                    <div className="p-2 bg-primary/10 rounded-lg">
-                        <Youtube className="w-6 h-6 text-primary" />
+                <Link href="/" className="flex items-center gap-2 group">
+                    <div className="relative w-8 h-8 flex items-center justify-center text-foreground group-hover:text-primary transition-colors duration-300">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-8 h-8">
+                            <path d="M 8 8 L 8 24 L 20 16 Z" stroke="currentColor" strokeWidth="2" fill="none" opacity="0.5" />
+                            <path d="M 12 10 L 12 22 L 22 16 Z" fill="currentColor" />
+                        </svg>
                     </div>
-                    <span className="text-xl font-bold tracking-tight">VibeClone</span>
+                    <span className="text-xl font-bold tracking-tight">VibeCloned</span>
                 </Link>
 
                 <div className="flex items-center gap-4">
+                    <Link
+                        href="/prompts"
+                        className="text-sm font-medium hover:text-primary transition-colors"
+                    >
+                        🤖 AI Prompts
+                    </Link>
                     {session ? (
                         <ProfileMenu />
                     ) : (

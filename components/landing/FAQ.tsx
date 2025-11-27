@@ -6,12 +6,20 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
     {
-        question: "What is VibeClone?",
-        answer: "VibeClone is a powerful competitor research tool designed for YouTube creators. It allows you to extract, analyze, and replicate the success strategies of top performing channels in your niche."
+        question: "What is VibeCloned?",
+        answer: "VibeCloned is a powerful competitor research tool designed for YouTube creators. It allows you to extract, analyze, and replicate the success strategies of top performing channels in your niche."
     },
     {
         question: "How does it work?",
-        answer: "Simply paste a YouTube video or channel URL into the input field. VibeClone fetches public data from YouTube, analyzes it, and presents you with actionable insights like transcripts, tags, and performance metrics."
+        answer: "Simply paste a YouTube video or channel URL into the input field. VibeCloned fetches public data from YouTube, analyzes it, and presents you with actionable insights like transcripts, tags, and performance metrics."
+    },
+    {
+        question: "What are AI Analysis Prompts?",
+        answer: "Our AI Prompts library provides ready-made prompts designed to analyze competitor data with ChatGPT, Claude, or Gemini. Simply copy a prompt, paste your extracted data, and get instant insights on title patterns, thumbnail strategies, and content structures."
+    },
+    {
+        question: "How do I use the AI Prompts?",
+        answer: "After logging in, navigate to the AI Prompts page from the navigation bar. Browse prompts by category, click 'Copy Prompt', then paste it into your preferred AI assistant along with your extracted competitor data. The AI will analyze and provide actionable insights."
     },
     {
         question: "What data can I extract?",
@@ -19,7 +27,7 @@ const faqs = [
     },
     {
         question: "Is it free to use?",
-        answer: "Yes, VibeClone offers a free tier that allows you to analyze videos and channels. We may introduce premium features for advanced bulk analysis in the future."
+        answer: "Yes, VibeCloned offers a free tier that allows you to analyze videos and channels. We may introduce premium features for advanced bulk analysis in the future."
     },
     {
         question: "Can I export the data?",
@@ -27,7 +35,7 @@ const faqs = [
     },
     {
         question: "Is this legal?",
-        answer: "Yes. VibeClone only accesses and aggregates publicly available data from YouTube. We do not access private videos or personal account information."
+        answer: "Yes. VibeCloned only accesses and aggregates publicly available data from YouTube. We do not access private videos or personal account information."
     }
 ];
 

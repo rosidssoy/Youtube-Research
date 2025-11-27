@@ -43,7 +43,7 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
                             </div>
 
                             <div className="space-y-2">
-                                <h2 className="text-2xl font-bold tracking-tight">Unlock VibeClone</h2>
+                                <h2 className="text-2xl font-bold tracking-tight">Unlock VibeCloned</h2>
                                 <p className="text-muted-foreground">
                                     Sign up to extract video data, analyze competitors, and save your research history.
                                 </p>
